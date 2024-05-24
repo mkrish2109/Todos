@@ -1,0 +1,20 @@
+.addTaskContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1% 10%;
+  gap: 8px;
+}
+.addTaskContainer h2 {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.taskInput {
+  width: 100%;
+  padding: 12px;
+  border-radius: 32px;
+}
+

@@ -1,0 +1,32 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #afdde5;
+  color: #fff;
+  padding: 24px 32px;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.listMenu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+.listMenu a {
+  color: #692514;
+  font-weight: 500;
+  text-decoration-line: none;
+  padding: 10px;
+}
+.listMenu a:hover {
+  text-decoration: underline;
+}

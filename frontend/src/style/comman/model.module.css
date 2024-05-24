@@ -1,0 +1,38 @@
+.modelOuterConatiner {
+  background-color: rgba(0, 0, 0, 0.199);
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modelInnerConatiner {
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+  height: 50vh;
+  width: 50vh;
+  gap: 8px;
+}
+.titlecontainer {
+  display: flex;
+}
+.bodyContainer {
+  height: 100%;
+  width: 100%;
+ }
+.duoDate {
+  padding: 8px 10px;
+  border-radius: 32px;
+  cursor: pointer;
+  width: 100%;
+}
+
