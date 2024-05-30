@@ -43,7 +43,7 @@ function AddTask({ tasks, setTasks }) {
       <TextInput
         onChange={handleChange}
         name="task"
-        className="[&>div>input]:rounded-full grow-[1]"
+        className="[&>div>input]:rounded-md grow-[1]"
         type="text"
         sizing="md"
         icon={HiPencil}
@@ -54,7 +54,9 @@ function AddTask({ tasks, setTasks }) {
         className="[&>div]cursor-pointer"
       />
       <FlowSelect onChange={handleChange} />
-      <Button className="bg-[#003135]" pill type="submit">
+      <Button
+        className="bg-[#BCFD4C] text-black enabled:hover:bg-[#9aec0c]"
+        type="submit">
         <HiPlus className="h-5 w-5 mr-2" />
         Add Task
       </Button>

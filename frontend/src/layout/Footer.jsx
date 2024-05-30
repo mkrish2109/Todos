@@ -1,10 +1,11 @@
 import React from "react";
-import style from "../style/layout/footer.module.css";
 
 function Footer() {
   return (
-    <footer className={style.footer}>
-      <p> &copy; Copyright 2024. All rights Reserved</p>
+    <footer className="flex justify-center p-[32px] bg-[#383838] text-[white] w-full">
+      <p className="text-[1.1rem]">
+        &copy; Copyright 2024. All rights Reserved
+      </p>
     </footer>
   );
 }

@@ -30,9 +30,10 @@ function UpdateForm({ task, toggleModal, tasks, setTasks }) {
   }
 
   return (
-    <form className="flex flex-col gap-4 p-2  " onSubmit={handleSubmit}>
+   
+    <form className="flex flex-col gap-4 p-2 bg-[#3f3f3f] " onSubmit={handleSubmit}>
       <TextInput
-        className="[&>div>input]:rounded-full "
+        className="[&>div>input]:rounded-md "
         type="text"
         sizing="md"
         icon={HiPencil}
@@ -40,6 +41,7 @@ function UpdateForm({ task, toggleModal, tasks, setTasks }) {
         value={formData.task}
         name="task"
         onChange={handleChange}
+
       />
       <Datepicker
         value={new Date(formData.date)}
@@ -51,10 +53,11 @@ function UpdateForm({ task, toggleModal, tasks, setTasks }) {
         name="priority"
         onChange={handleChange}
       />
-      <Button pill gradientDuoTone="greenToBlue" type="submit">
+      <Button pill className="bg-[#BCFD4C] text-black enabled:hover:bg-[#9aec0c]"  type="submit">
         Submit
       </Button>
     </form>
+ 
   );
 }
 

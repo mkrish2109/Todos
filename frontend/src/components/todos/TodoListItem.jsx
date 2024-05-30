@@ -12,6 +12,7 @@ import {
   removeTaskFromState,
   updateTaskInState,
 } from "../../helper/taskHelper";
+import ModelNav from "./ModelNav";
 
 function TodoListItem({ task, tasks, setTasks }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,7 +68,7 @@ function TodoListItem({ task, tasks, setTasks }) {
       </div>
       {isOpen && (
         <FlowModel
-          title="Update Task"
+          title={<ModelNav />}
           isOpen={isOpen}
           toggleModal={toggleModal}
           body={

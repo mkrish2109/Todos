@@ -1,10 +1,24 @@
 import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import React from "react";
+import { useAuth } from "../provider/AuthProvider";
+import { Link } from "react-router-dom";
 
 function Login() {
+  const { login } = useAuth();
+  function handleSubmit(e) {
+    console.log(e.target["email"].value);
+    e.preventDefault();
+    const data = {};
+    data.email = e.target["email"].value;
+    data.password = e.target["password"].value;
+    login(data);
+  }
+
   return (
     <div className="items-center flex justify-center h-[calc(100vh-88px-90px)]  ">
-      <form className="p-8 rounded-lg min-w-[300px] max-w-md flex  flex-col gap-4 ">
+      <form
+        className="p-8 rounded-lg min-w-[300px] max-w-md flex [box-shadow:0px_12px_99px_15px_rgba(0,0,0,0.1)]  flex-col gap-4 "
+        onSubmit={handleSubmit}>
         <div className="">
           <div className="mb-2 block">
             <Label htmlFor="email1" value="Your email" />
@@ -12,6 +26,7 @@ function Login() {
           <TextInput
             id="email1"
             type="email"
+            name="email"
             placeholder="name@flowbite.com"
             required
           />
@@ -20,13 +35,16 @@ function Login() {
           <div className="mb-2 block">
             <Label htmlFor="password1" value="Your password" />
           </div>
-          <TextInput id="password1" type="password" required />
+          <TextInput id="password" name="password" type="password" required />
         </div>
-        <div className="flex items-center gap-2">
-          <Checkbox id="remember" />
-          <Label htmlFor="remember">Remember me</Label>
-        </div>
+
         <Button type="submit">Login</Button>
+        <p className="text-center">OR</p>
+        <Link
+          className="text-center underline hover:underline-offset-4 hover:text-zinc-500"
+          to="/register">
+          Register
+        </Link>
       </form>
     </div>
   );

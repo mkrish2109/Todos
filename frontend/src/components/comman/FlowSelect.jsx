@@ -19,7 +19,7 @@ function FlowSelect({ selected, onChange, ...others }) {
       <Select
         name="priority"
         id="priority"
-        className={`[&>div>select]:rounded-full ${others.className}`}
+        className={`[&>div>select]:rounded-md ${others.className}`}
         value={priority}
         onChange={handleChange}
         required

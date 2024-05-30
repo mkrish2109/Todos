@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #afdde5;
+  background-color: #6e6e6e;
   color: #fff;
   padding: 24px 32px;
 }
@@ -22,7 +22,6 @@
 }
 
 .listMenu a {
-  color: #692514;
   font-weight: 500;
   text-decoration-line: none;
   padding: 10px;

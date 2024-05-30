@@ -9,7 +9,7 @@ const Task = require("../models/Task");
 
 const getAllTasks = async (req, res) => {
   try {
-    const tasks = await Task.find();
+    const tasks = await Task.find({ userId: req.user.userId });
     res.status(200).json({ success: true, data: tasks });
   } catch (error) {
     res.status(500).json({ success: false, msg: "Failed to fetch tasks!" });
@@ -23,13 +23,13 @@ const getSingleTask = (req, res) => {
 const addTask = async (req, res) => {
   try {
     const { task, isCompleted, priority, dueDate } = req.body;
-    // const task = new Task();
-    // task.task = req.body.task;
-    // task.isCompleted = req.body.isCompleted;
-    // task.priority = req.body.priority;
-    // task.dueDate = req.body.dueDate;
-    // await task.save();
-    const result = await Task.create({ task, isCompleted, priority, dueDate });
+    const result = await Task.create({
+      task,
+      isCompleted,
+      priority,
+      dueDate,
+      userId: req.user.userId,
+    });
     res.status(200).json({ success: true, data: result });
   } catch (error) {
     console.log("Error: ", error);

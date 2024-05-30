@@ -5,14 +5,14 @@
   gap: 10px;
   height: 50px;
 
-  background-color: #79bfc4;
+  background-color: #383838;
   /* color: #ffff; */
   margin: 1% 10%;
   padding: 32px 32px;
   border-radius: 32px;
 }
 .todoItemContainer:hover {
-  background-color: #dbf2f7;
+  background-color: #383838;
 }
 .chekbox {
   width: 16px;
@@ -35,16 +35,15 @@
 
 .icon {
   padding: 10px;
-  border-radius: 50%; 
+  border-radius: 50%;
   font-weight: 900;
   cursor: pointer;
-}
-.update {
-  background-color: #00cee9dc;
+  color: black;
 }
 .update:hover {
-  background-color: #03c1da;
+  background-color: #9aec0c;
 }
+
 .delete {
   background-color: #f44336;
   color: #ffff;
