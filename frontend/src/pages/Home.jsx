@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className={style.homeContainer}>
       <div className={`text-5xl font-extrabold ${style.left}`}>
-        <h1 className="text-4xl font-mono leading-loose bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500  ">
+        <h1 className="text-4xl leading-loose  text-[#ffffff]">
           Lorem ipsum dolor sit amet consectetur adipisicing.
         </h1>
       </div>

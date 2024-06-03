@@ -77,9 +77,15 @@ function Register() {
           />
         </div>
 
-        <Button type="submit">Register new account</Button>
+        <Button
+          type="submit"
+          className="bg-[#BCFD4C] text-black enabled:hover:bg-[#9aec0c]">
+          Register new account
+        </Button>
         <p className="text-center">OR</p>
-        <Link className="text-center underline hover:underline-offset-4 hover:text-zinc-500" to="/login">
+        <Link
+          className="text-center underline hover:underline-offset-4 hover:  text-[#BCFD4C]"
+          to="/login">
           Login
         </Link>
       </form>

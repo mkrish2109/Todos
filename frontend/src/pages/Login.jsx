@@ -38,10 +38,14 @@ function Login() {
           <TextInput id="password" name="password" type="password" required />
         </div>
 
-        <Button type="submit">Login</Button>
+        <Button
+          type="submit"
+          className="bg-[#BCFD4C] text-black enabled  :hover:bg-[#9aec0c]">
+          Login
+        </Button>
         <p className="text-center">OR</p>
         <Link
-          className="text-center underline hover:underline-offset-4 hover:text-zinc-500"
+          className="text-center underline hover:underline-offset-4 hover:text-[#BCFD4C]"
           to="/register">
           Register
         </Link>

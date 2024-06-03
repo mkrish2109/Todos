@@ -34,3 +34,18 @@ export function logoutUser(data) {
 }
 
 //End Auth
+
+//deshBord
+export function getDashBordTask() {
+  return fetchHelper(`${BASE_URL}/dashbord/stats`, true);
+}
+
+//end
+
+// User
+
+export function updateUser(id, body) {
+  return fetchHelper(`${BASE_URL}/users/${id}`, true, "PATCH", body);
+}
+
+// End User

@@ -18,9 +18,6 @@ function Navbar() {
         {user ? (
           <>
             <li>
-              <Link to="/admin/deshbord">Deshbord</Link>
-            </li>
-            <li>
               <Link to="/admin/todos">Todos</Link>
             </li>
           </>
