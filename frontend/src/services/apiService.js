@@ -1,6 +1,6 @@
 import { fetchHelper } from "../helper/fetchHelper";
 
-const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "http://localhost:5000";
 
 export function getAllTasks() {
   return fetchHelper(`${BASE_URL}/tasks`, true);

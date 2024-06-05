@@ -27,13 +27,23 @@ function Navbar() {
           </li>
         )}
         {user && (
-          <li>
-            <Button
-              className=" bg-red-600 enabled:hover:bg-red-700"
-              onClick={logout}>
-              Logout
-            </Button>
-          </li>
+          <>
+            <li>
+              <Button
+                className=" bg-red-600 enabled:hover:bg-red-700"
+                onClick={logout}>
+                Logout
+              </Button>
+            </li>
+            <li>
+              <img
+                className="h-10 w-10 rounded-full border-2 border[#BCFD4C]"
+                src={user.image}
+                alt=""
+                srcset=""
+              />
+            </li>
+          </>
         )}
       </ul>
     </nav>

@@ -29,7 +29,7 @@ function SideBar() {
             <Link
               key={index}
               to={value.link}
-              className="flex gap-2 items-center cursor-pointer hover:underline hover:text-[#bcfd4c] active:text-[#bcfd4c] focus:ring-violet-300">
+              className="flex gap-2 items-center cursor-pointer hover:underline hover:bg-[#bcfd4c] p-1 pl-2 rounded-md hover:text-[#000000] active:text-[#bcfd4c] focus:ring-violet-300">
               {value.icon}
               {value.name}
             </Link>
