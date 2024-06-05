@@ -5,6 +5,7 @@ import { addTaskToState } from "../../helper/taskHelper";
 import { addTask } from "../../services/apiService";
 import style from "../../style/todos/addTask.module.css";
 import FlowSelect from "../comman/FlowSelect";
+import { toast } from "react-toastify";
 
 function AddTask({ tasks, setTasks }) {
   const [newTodos, setNewTodos] = useState({
@@ -26,7 +27,7 @@ function AddTask({ tasks, setTasks }) {
 
     setTimeout(() => {
       if (result.success === true) {
-        alert("Added successfully!");
+        toast("Added successfully!");
       }
     }, 100);
   }
@@ -51,7 +52,7 @@ function AddTask({ tasks, setTasks }) {
       />
       <Datepicker
         onSelectedDateChanged={handleChange}
-        className="[&>div]cursor-pointer"
+        className="[&>div]cursor-pointer [&>button]bg-[#BCFD4C]"
       />
       <FlowSelect onChange={handleChange} />
       <Button

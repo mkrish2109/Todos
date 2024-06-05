@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const bcrypt = require("bcrypt");
 
 const getAllUser = async (req, res) => {
   try {
@@ -17,28 +18,21 @@ const getSingalUser = async (req, res) => {
     res.status(500).json({ success: false, msg: "Failed to fetch user!" });
   }
 };
-
-// const addUser = async (req, res) => {
-//   // try {
-//   //   let objUser = { ...req.body };
-
-//   //   const existUser = await User.countDocuments(req.params.id);
-//   //   if (existUser === 0) {
-//   //     objUser.role = "admin";
-//   //   }
-//   //   const user = await User.create(objUser);
-//   //   res.status(200).json({ success: true, data: user });
-//   // } catch (error) {
-//   //   console.log("Error: ", error);
-//   //   res.status(500).json({ success: false, msg: "Failed to add user!" });
-//   // }
-// };
-
+``;
 const updateUser = async (req, res) => {
   try {
-    const updatesUser = await User.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-    });
+    const salt = bcrypt.genSaltSync(10);
+
+    const hashPassword = bcrypt.hashSync(req.body.password.toString(), salt);
+
+    const updatesUser = await User.findByIdAndUpdate(
+      req.params.id,
+      { password: hashPassword },
+      {
+        new: true,
+      }
+    );
+
     res.status(200).json({ success: true, data: updatesUser });
   } catch (error) {
     console.log("Error: ", error);

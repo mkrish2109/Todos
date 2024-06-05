@@ -7,9 +7,10 @@
 }
 .addTaskContainer h2 {
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 800;
   white-space: nowrap;
   margin-right: 10px;
+  letter-spacing: 0.05em;
 }
 
 .taskInput {

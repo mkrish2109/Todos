@@ -13,6 +13,7 @@ import {
   updateTaskInState,
 } from "../../helper/taskHelper";
 import ModelNav from "./ModelNav";
+import { toast } from "react-toastify";
 
 function TodoListItem({ task, tasks, setTasks }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,7 @@ function TodoListItem({ task, tasks, setTasks }) {
   function handleDelete() {
     deleteTask(task._id);
     removeTaskFromState(task._id, tasks, setTasks);
+    toast("Deleted Successfully");
   }
 
   function handleEdit() {

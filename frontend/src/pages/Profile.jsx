@@ -1,11 +1,12 @@
 import { Button, Label, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { updateUser } from "../services/apiService";
+import { toast } from "react-toastify";
 import { useAuth } from "../provider/AuthProvider";
 
 function Profile() {
   // const { register } = useAuth();
-  const { user } = useAuth();
+  const { user, removeUser } = useAuth();
   const [formState, setFormState] = useState({
     username: user.username,
     password: "",
@@ -21,7 +22,8 @@ function Profile() {
   async function handleSubmit(e) {
     e.preventDefault();
     if (e.target["password"].value !== e.target["conformPassword"].value) {
-      alert("Password and conform password are not same");
+      toast("Password and conform-password don't match!");
+
       return;
     }
     const result = await updateUser(user.userId, {
@@ -32,6 +34,8 @@ function Profile() {
     console.log(formState);
 
     // register(data);
+
+    removeUser();
   }
 
   return (

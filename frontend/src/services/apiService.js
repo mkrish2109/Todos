@@ -29,7 +29,7 @@ export function loginUser(data) {
   return fetchHelper(`${BASE_URL}/auth/login`, false, "POST", data);
 }
 
-export function logoutUser(data) {
+export function logoutUser() {
   return fetchHelper(`${BASE_URL}/auth/logout`, true);
 }
 

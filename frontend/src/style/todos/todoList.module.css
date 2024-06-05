@@ -39,6 +39,7 @@
   font-weight: 900;
   cursor: pointer;
   color: black;
+  background-color: #bcfd4c;
 }
 .update:hover {
   background-color: #9aec0c;

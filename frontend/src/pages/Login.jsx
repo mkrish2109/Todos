@@ -40,7 +40,7 @@ function Login() {
 
         <Button
           type="submit"
-          className="bg-[#BCFD4C] text-black enabled  :hover:bg-[#9aec0c]">
+          className="bg-[#BCFD4C] text-black enabled:hover:bg-[#9aec0c]">
           Login
         </Button>
         <p className="text-center">OR</p>

@@ -1,8 +1,7 @@
 export function fetchHelper(url, isProtected, method, body) {
   let options = {};
 
-  const userObj = JSON.parse(localStorage.getItem("user"));
-  const token = userObj && userObj.token;
+  const token = localStorage.getItem("token");
 
   if (isProtected && !token) {
     throw new Error("No token present!");
