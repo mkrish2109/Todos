@@ -12,8 +12,9 @@ import {
   removeTaskFromState,
   updateTaskInState,
 } from "../../helper/taskHelper";
-import ModelNav from "./ModelNav";
+import ModelNav from "../comman/ModelNav";
 import { toast } from "react-toastify";
+import { Checkbox } from "flowbite-react";
 
 function TodoListItem({ task, tasks, setTasks }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ function TodoListItem({ task, tasks, setTasks }) {
   function handleDelete() {
     deleteTask(task._id);
     removeTaskFromState(task._id, tasks, setTasks);
-    toast("Deleted Successfully");
+    toast.error("Deleted Successfully");
   }
 
   function handleEdit() {
@@ -43,11 +44,10 @@ function TodoListItem({ task, tasks, setTasks }) {
     <>
       <div className={style.todoItemContainer}>
         <div className="flex items-center justify-center gap-3">
-          <input
-            type="checkbox"
+          <Checkbox
             name="checkbox"
             id="checkbox"
-            checked={task.isCompleted}
+          c
             className={style.chekbox}
             onChange={handleCheckChange}
           />
@@ -70,7 +70,7 @@ function TodoListItem({ task, tasks, setTasks }) {
       </div>
       {isOpen && (
         <FlowModel
-          title={<ModelNav />}
+          title={<ModelNav title="Update Form" />}
           isOpen={isOpen}
           toggleModal={toggleModal}
           body={

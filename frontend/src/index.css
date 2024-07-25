@@ -17,11 +17,7 @@ body {
   color: #ffff;
 }
 
-button {
-  /* background-color: #bcfd4c; */
-}
-
 button:hover {
   cursor: pointer;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }

@@ -20,7 +20,7 @@ const getSingalUser = async (req, res) => {
     res.status(500).json({ success: false, msg: "Failed to fetch user!" });
   }
 };
-``;
+
 const updateUser = async (req, res) => {
   try {
     const { password, username } = req.body;
@@ -36,8 +36,9 @@ const updateUser = async (req, res) => {
     if (username) {
       newUserObj.username = username;
     }
+
     if (req.files && req.files.image) {
-      if (req.files.image.size > 5000000) {
+      if (req.files.image.size > 1000000) {
         return res.status(400).json({
           success: false,
           msg: "Please upload a file smaller than or equal to 1mb!",
@@ -70,9 +71,11 @@ const updateUser = async (req, res) => {
         new: true,
       }
     );
-    const token = req.headers.authorization.split(" ")[1];
-    await ExToken.create({ token });
-    console.log(newUserObj);
+    if (password) {
+      const token = req.headers.authorization.split(" ")[1];
+      await ExToken.create({ token });
+    }
+    // console.log(newUserObj);
     res
       .status(200)
       .json({ success: true, data: "User updated successfully! " });

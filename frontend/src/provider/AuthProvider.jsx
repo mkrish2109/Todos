@@ -35,7 +35,7 @@ function AuthProvider({ children }) {
       navigate("/admin/todos");
     } else {
       localStorage.removeItem("token");
-      toast(result.msg);
+      toast.error(result.msg);
     }
   }
 
@@ -48,7 +48,7 @@ function AuthProvider({ children }) {
       navigate("/admin/todos");
     } else {
       localStorage.removeItem("token");
-      toast(result.msg);
+      toast.error(result.msg);
     }
   }
 
@@ -59,13 +59,14 @@ function AuthProvider({ children }) {
       setUser(null);
       navigate("/");
     } else {
-      toast(result.msg);
+      toast.error(result.msg);
     }
   }
 
   async function removeUser() {
     setUser(null);
     localStorage.removeItem("token");
+
     navigate("/login");
   }
 

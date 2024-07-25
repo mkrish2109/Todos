@@ -13,7 +13,7 @@ function Todos() {
     });
   }, []);
   return (
-    <div className="flex flex-col gap-10 p-5  h-[calc(100vh-90 px-90px)]">
+    <div className="flex flex-col gap-10 p-5  min-h-[100vh]">
       <AddTask tasks={tasks} setTasks={setTasks} />
       <TodoList tasks={tasks} setTasks={setTasks} />
     </div>

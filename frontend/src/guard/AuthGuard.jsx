@@ -6,7 +6,7 @@ function AuthGuard({ children }) {
   const { user } = useAuth();
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate tok="/login" replace />;
   }
 
   return <div>{children}</div>;

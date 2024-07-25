@@ -27,7 +27,7 @@ function AddTask({ tasks, setTasks }) {
 
     setTimeout(() => {
       if (result.success === true) {
-        toast("Added successfully!");
+        toast.success("Task added successfully!");
       }
     }, 100);
   }

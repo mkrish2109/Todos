@@ -3,7 +3,7 @@ import React from "react";
 
 function TostComponents() {
   return (
-    <Toasst>
+    <Toast>
       <div className="text-sm font-normal">{message}</div>
       <div className="ml-auto flex items-center space-x-2">
         <a
@@ -13,7 +13,7 @@ function TostComponents() {
         </a>
         <Toast.Toggle />
       </div>
-    </Toasst>
+    </Toast>
   );
 }
 

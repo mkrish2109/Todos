@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 function Login() {
   const { login } = useAuth();
   function handleSubmit(e) {
-    console.log(e.target["email"].value);
     e.preventDefault();
     const data = {};
     data.email = e.target["email"].value;
@@ -37,7 +36,6 @@ function Login() {
           </div>
           <TextInput id="password" name="password" type="password" required />
         </div>
-
         <Button
           type="submit"
           className="bg-[#BCFD4C] text-black enabled:hover:bg-[#9aec0c]">

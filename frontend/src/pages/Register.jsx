@@ -8,7 +8,7 @@ function Register() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (e.target["password"].value !== e.target["conformPassword"].value) {
+    if (e.target["password"].value !== e.target["confirmPassword"].value) {
       alert("Password and conform password are not same");
       return;
     }
@@ -66,12 +66,12 @@ function Register() {
         </div>
         <div>
           <div className="mb-2 block">
-            <Label htmlFor="repeat-password" value="Repeat password" />
+            <Label htmlFor="Confirm password" value="Repeat password" />
           </div>
           <TextInput
             id="repeat-password"
             type="password"
-            name="conformPassword"
+            name="confirmPassword"
             required
             shadow
           />
