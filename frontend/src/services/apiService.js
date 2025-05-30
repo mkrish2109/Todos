@@ -1,6 +1,6 @@
 import { fetchHelper } from "../helper/fetchHelper";
 
-export const BASE_URL = "http://localhost:5000";
+export const BASE_URL = "https://todos-sseb.onrender.com";
 
 export function getAllTasks() {
   return fetchHelper(`${BASE_URL}/tasks`, true);
